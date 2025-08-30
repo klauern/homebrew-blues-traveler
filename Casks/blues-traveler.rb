@@ -2,7 +2,7 @@
 cask "blues-traveler" do
   desc "Claude Code hooks management tool - 'The hook brings you back'"
   homepage "https://github.com/klauern/blues-traveler"
-  version "0.1.0"
+  version "0.1.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "blues-traveler" do
 
   on_macos do
     on_intel do
-      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.0/blues-traveler_Darwin_x86_64.tar.gz"
-      sha256 "2735fab67dd1e6addef681aadeb7e6e21d60770a74664fa7c3a0780e65b83720"
+      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.2/blues-traveler_Darwin_x86_64.tar.gz"
+      sha256 "4b3d7420828c14c9377b4a2186beb43a521fcbdb668580dbe9fcac6878c5a454"
     end
     on_arm do
-      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.0/blues-traveler_Darwin_arm64.tar.gz"
-      sha256 "ddb0dbde642803a39ae62e87737f38f4e037d20c6bd971c6d6091800d74d0c57"
+      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.2/blues-traveler_Darwin_arm64.tar.gz"
+      sha256 "bea4d087769ffbe9f428d01d9cc10cb6eaac223ef2b9002c2b937085270302fe"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.0/blues-traveler_Linux_x86_64.tar.gz"
-      sha256 "47b358e08e9f2b169e6cf7ec0899b962c8bf7bd11c435876ebb44854705550b2"
+      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.2/blues-traveler_Linux_x86_64.tar.gz"
+      sha256 "260ec3e34cb635385a89b7825fde1c143dfd8a4272ae0ce2be6f6a99ac63ddb2"
     end
     on_arm do
-      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.0/blues-traveler_Linux_arm64.tar.gz"
-      sha256 "158093475e66ff547aba47a9ad09e02b98c8554cebd62dca0a6cb7fa326ff2d4"
+      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.2/blues-traveler_Linux_arm64.tar.gz"
+      sha256 "63df56a5c7943c85e768f47a8144485dba42021714ab39aa27f9bc629ad11c80"
     end
   end
 
