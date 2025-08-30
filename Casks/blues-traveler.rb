@@ -2,7 +2,7 @@
 cask "blues-traveler" do
   desc "Claude Code hooks management tool - 'The hook brings you back'"
   homepage "https://github.com/klauern/blues-traveler"
-  version "0.1.2"
+  version "0.1.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,29 @@ cask "blues-traveler" do
 
   on_macos do
     on_intel do
-      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.2/blues-traveler_Darwin_x86_64.tar.gz"
-      sha256 "4b3d7420828c14c9377b4a2186beb43a521fcbdb668580dbe9fcac6878c5a454"
+      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.3/blues-traveler_Darwin_x86_64.tar.gz"
+      sha256 "9251e23c83e9d0d86c211b74ff468f64509241531a7d3e79d054ed690c11c12e"
     end
     on_arm do
-      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.2/blues-traveler_Darwin_arm64.tar.gz"
-      sha256 "bea4d087769ffbe9f428d01d9cc10cb6eaac223ef2b9002c2b937085270302fe"
+      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.3/blues-traveler_Darwin_arm64.tar.gz"
+      sha256 "72ccc1f6ccb3a8bad5e52027389f7ef3a586f0d2bc67ccedfbb0df35d912bdaf"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.2/blues-traveler_Linux_x86_64.tar.gz"
-      sha256 "260ec3e34cb635385a89b7825fde1c143dfd8a4272ae0ce2be6f6a99ac63ddb2"
+      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.3/blues-traveler_Linux_x86_64.tar.gz"
+      sha256 "62c94169fb95ee6aab78b95ce28d42d4af00526961f1191bca09c1a91e02aa7f"
     end
     on_arm do
-      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.2/blues-traveler_Linux_arm64.tar.gz"
-      sha256 "63df56a5c7943c85e768f47a8144485dba42021714ab39aa27f9bc629ad11c80"
+      url "https://github.com/klauern/blues-traveler/releases/download/v0.1.3/blues-traveler_Linux_arm64.tar.gz"
+      sha256 "d61233b73989f3e7d9b5a41d3ce6391222f77ea69a80add68a70235d71d5e514"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/blues-traveler"]
     end
   end
 
